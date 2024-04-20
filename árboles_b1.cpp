@@ -23,7 +23,7 @@ int main()
     cout << "Recuerda que el primer padre sera la raiz del arbol" << endl;;
     cout << endl;
     for (int i = 0; i < n - 1; ++i) {
-        int parent, child;
+        long long parent, child;
    
             cout << "Padre: ";
             cin >> parent;
@@ -67,6 +67,12 @@ int main()
     cout << "-------------------------------------------------------------------------------" << endl;
     cout << endl;
     cout << endl;
+    cout << endl;
+    /*cout << "-------------------------------------------------------------------------------" << endl;
+    cout << "Elementos de B(T): ";
+    tree.getBTree(root);
+    cout << endl;
+    cout << "-------------------------------------------------------------------------------" << endl;*/
     cout <<"-------------------------------" << endl;
     cout << "Digrafo de T:" << endl;
     tree.printDigraph(root);

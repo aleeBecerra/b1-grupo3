@@ -1,2 +1,4 @@
 ﻿  árboles_b1.cpp
+C:\Users\User\Downloads\árboles_b1\árboles_b1.cpp(34,29): warning C4244: 'argumento': conversión de '__int64' a 'int'; posible pérdida de datos
+C:\Users\User\Downloads\árboles_b1\árboles_b1.cpp(34,21): warning C4244: 'argumento': conversión de '__int64' a 'int'; posible pérdida de datos
   árboles_b1.vcxproj -> C:\Users\User\Downloads\árboles_b1\x64\Debug\árboles_b1.exe
