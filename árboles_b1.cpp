@@ -1,8 +1,15 @@
-using namespace std;
 #include <iostream>
+#include <conio.h> // Para getch()
 #include "NaryTree.h"
-int main()
-{
+
+using namespace std;
+
+void waitForKeypress() {
+    cout << "Presiona cualquier tecla para continuar..." << endl;
+    _getch(); // Espera la pulsación de una tecla
+}
+
+int main() {
     int n;
 
     cout << "-------------------------| BIENVENIDO |------------------------------" << endl;
@@ -19,28 +26,32 @@ int main()
 
     NaryTree tree(1);
     cout << "Ingrese los valores de los nodos y sus relaciones (padre hijo):" << endl;
+    cout << "Recuerda que el primer padre sera la raiz del arbol" << endl;
     cout << endl;
-    cout << "Recuerda que el primer padre sera la raiz del arbol" << endl;;
-    cout << endl;
+
     for (int i = 0; i < n - 1; ++i) {
         long long parent, child;
-   
-            cout << "Padre: ";
-            cin >> parent;
-            cout << "Hijo: ";
-            cin >> child;
-        
+
+        cout << "Relacion " << i + 1 << " - Padre: ";
+        cin >> parent;
+        cout << "Relacion " << i + 1 << " - Hijo: ";
+        cin >> child;
 
         tree.insert(parent, child);
     }
 
     TreeNode* root = tree.getRoot();
+
     cout << endl;
-    cout<<"-------------------------------------------------------------------------------" << endl;
+    cout << "Presiona cualquier tecla para mostrar los resultados..." << endl;
+    waitForKeypress(); // Espera la pulsación de una tecla para mostrar los resultados
+
+    cout << endl;
+    cout << "-------------------------------------------------------------------------------" << endl;
     cout << "Elementos de T por extension: ";
     tree.printExtension(root);
     cout << endl;
-    cout<<"-------------------------------------------------------------------------------" << endl;
+    cout << "-------------------------------------------------------------------------------" << endl;
     cout << endl;
     cout << endl;
     cout << endl;
@@ -73,15 +84,15 @@ int main()
     tree.getBTree(root);
     cout << endl;
     cout << "-------------------------------------------------------------------------------" << endl;*/
-    cout <<"-------------------------------" << endl;
+    cout << "-------------------------------" << endl;
     cout << "Digrafo de T:" << endl;
     tree.printDigraph(root);
-    cout <<"-------------------------------" << endl;
+    cout << "-------------------------------" << endl;
 
     cout << endl;
 
-    TreeNode* bTree = tree.getBTree(root);
+    cout << "Presiona cualquier tecla para salir del programa..." << endl;
+    _getch(); // Espera la pulsación de una tecla para salir del programa
+
 
 }
-
-
